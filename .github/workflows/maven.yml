@@ -5,9 +5,9 @@ name: Maven BUILD WITH H2 DB
 
 on:
   push:
-    branches: [ master ]
+    branches: [ split ]
   pull_request:
-    branches: [ master ]
+    branches: [ split ]
 
 jobs:
   build:
