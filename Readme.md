@@ -1,6 +1,6 @@
 # IndeedBot API
 ###### Jobs scanner
-
+[![BUILD](https://github.com/AdamWandoch/indeed-bot-api/workflows/BUILD/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 [![BUILD](https://github.com/AdamWandoch/indeed-bot-api/workflows/BUILD/badge.svg)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 
 VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
