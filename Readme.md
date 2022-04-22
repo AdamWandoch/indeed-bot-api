@@ -7,7 +7,7 @@ VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
 
 This is an experimental project to explore Java ecosystem of technologies for web development.
 
-The application serves data from Postgres Database gathered by [indeed-bot](https://github.com/AdamWandoch/indeed-bot)
+The application serves data from Postgres Database gathered by instances of [indeed-bot](https://github.com/AdamWandoch/indeed-bot)
 
 This Spring Boot powered RESTful API is running on Heroku and another instance on AWS.
 
