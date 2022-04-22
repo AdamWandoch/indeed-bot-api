@@ -36,9 +36,9 @@ public class IndeedBotApplication {
 
     @Scheduled(initialDelayString = "${initial.update.delay}", fixedDelayString = "${update.delay}")
     void refreshJobsData() {
-        // initializes main function: load cache from database, retrieve new list from Indeed.ie, update database
-        LOGGER.info("CACHE AND STORE INITIALIZED");
-        indeedJobService.cacheAndStoreJobs();
+        // reloads records from database
+        LOGGER.info("RELOADING RECORDS INITIALIZED");
+        indeedJobService.reloadFromDatasource();
     }
 }
 

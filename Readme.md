@@ -1,5 +1,5 @@
-# IndeedBot API
-###### Jobs scanner
+# IndeedBot
+###### RESTful API
 [![BUILD](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 
 VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
@@ -7,18 +7,16 @@ VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
 
 This is an experimental project to explore Java ecosystem of technologies for web development.
 
-The application retrieves html from https://ie.indeed.com/jobs?q=software&l=cork&sort=date&filter=0&start=
-and parses it creating a list of IndeedJob objects containing information about the job title, 
-company name, unique "indeed job id" and a link to view the listing. All data is persisted to Postgres Database hosted on AWS RDS and retrieved on application restart. 
-Data is exposed through a number of basic endpoints in JSON format.
+This application serves data from Postgres Database gathered by [indeed-bot](https://github.com/AdamWandoch/indeed-bot)
 
-This Spring Boot powered RESTful API is running on Heroku and another instance on AWS, and it has a task that hits the custom "/ping" endpoint in a specified time interval to keep itself awake. Another scheduled task scans Indeed.ie and updates the job list periodically.<br>
+This Spring Boot powered RESTful API is running on Heroku and another instance on AWS.
 
 #### To run the project locally:
  * install PostgreSQL
- * create a local postgres database (I'm using pgAdmin for local postgres administration)
- * install Java 11 or higher
- * git clone this repository
+* create a local postgres database (I'm using pgAdmin for local postgres administration)
+* install Java 11 or higher
+* [install](https://github.com/AdamWandoch/indeed-bot#readme) indeed-bot to populate database
+* git clone this repository
  * add system environment variables:
     * POSTGRES_USERNAME set value to your local postgres username
     * POSTGRES_PASSWORD set value to your local postgres password

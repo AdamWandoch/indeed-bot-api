@@ -82,7 +82,7 @@ public class IndeedJobController {
 
     @GetMapping("/update")
     public String update() {
-        indeedJobService.cacheAndStoreJobs();
+        indeedJobService.reloadFromDatasource();
         return "<font size=5>Updated job list size: " + indeedJobService.getCachedJobs().size();
     }
 
