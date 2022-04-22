@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
 @Service
 public class IndeedJobService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IndeedJobService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(IndeedJobService.class);
 
     @Autowired
     private IndeedJobRepository indeedJobRepository;
@@ -35,15 +36,21 @@ public class IndeedJobService {
         return "https://ie.indeed.com/viewjob?jk=".concat(jobId);
     }
 
+//    @PostConstruct
+//    public void runAfterObjectCreated() {
+//        reloadFromDatasource();
+//    }
+
+    @PostConstruct
     public void reloadFromDatasource() {
         // reloads records from database
         indeedJobRepository.findAll().forEach(job -> {
             if (!cachedJobs.contains(job)) cachedJobs.add(job);
         });
         if (cachedJobs.size() > 0) {
-            LOGGER.info("CACHED JOB LIST WITH " + cachedJobs.size() + " RECORDS");
+            LOG.info("CACHED JOB LIST WITH " + cachedJobs.size() + " RECORDS");
         } else {
-            LOGGER.info("JOB LIST SIZE == 0, CACHING UNSUCCESSFUL");
+            LOG.info("JOB LIST SIZE == 0, CACHING UNSUCCESSFUL");
         }
     }
 

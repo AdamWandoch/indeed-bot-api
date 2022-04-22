@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class IndeedBotApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IndeedBotApplication.class);
+    private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
 
     @Autowired
     private IndeedJobService indeedJobService;
@@ -30,15 +30,8 @@ public class IndeedBotApplication {
 
     @Scheduled(initialDelayString = "PT5S", fixedDelayString = "${ping.delay}")
     void pingAll() {
-        LOGGER.info("PING ALL INITIALIZED");
+        LOG.info("PING ALL INITIALIZED");
         pingController.pingAll();
-    }
-
-    @Scheduled(initialDelayString = "${initial.update.delay}", fixedDelayString = "${update.delay}")
-    void refreshJobsData() {
-        // reloads records from database
-        LOGGER.info("RELOADING RECORDS INITIALIZED");
-        indeedJobService.reloadFromDatasource();
     }
 }
 
