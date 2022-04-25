@@ -17,10 +17,19 @@ import java.net.URL;
 
 @RestController
 public class PingController {
-
-    private final String PING_ENDPOINT_URL_HEROKU = "https://indeed-bot.herokuapp.com/ping";
+//    legacy deployments
+//    private final String PING_ENDPOINT_URL_HEROKU = "https://indeed-bot.herokuapp.com/ping";
 //    private final String PING_ENDPOINT_URL_HEROKU_API = "https://indeed-bot-api.herokuapp.com/ping";
-    private final String PING_ENDPOINT_URL_AWS = "https://ru4umr3xja.eu-west-1.awsapprunner.com/ping";
+//    private final String PING_ENDPOINT_URL_AWS = "https://ru4umr3xja.eu-west-1.awsapprunner.com/ping";
+
+    private final String PING_ENDPOINT_URL_AWS_API = "https://3hvy3ei8qx.eu-west-1.awsapprunner.com/ping";
+
+    private final String PING_ENDPOINT_URL_AWS_BOT_1 = "https://fkeixfwcg3.us-east-1.awsapprunner.com/ping";
+    private final String PING_ENDPOINT_URL_AWS_BOT_2 = "https://wk3etpctsu.us-east-2.awsapprunner.com/ping";
+    private final String PING_ENDPOINT_URL_AWS_BOT_3 = "https://bkiktqyhhn.us-west-2.awsapprunner.com/ping";
+    private final String PING_ENDPOINT_URL_AWS_BOT_4 = "https://mt5z57rhmm.ap-northeast-1.awsapprunner.com/ping";
+
+
     private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
 
     @GetMapping("/ping")
@@ -30,9 +39,11 @@ public class PingController {
 
     void pingAll() {
         //combines ping operations to multiple instances
-        ping(PING_ENDPOINT_URL_HEROKU);
-//        ping(PING_ENDPOINT_URL_HEROKU_API);
-        ping(PING_ENDPOINT_URL_AWS);
+        ping(PING_ENDPOINT_URL_AWS_API);
+        ping(PING_ENDPOINT_URL_AWS_BOT_1);
+        ping(PING_ENDPOINT_URL_AWS_BOT_2);
+        ping(PING_ENDPOINT_URL_AWS_BOT_3);
+        ping(PING_ENDPOINT_URL_AWS_BOT_4);
     }
 
     void ping(String url_string) {
