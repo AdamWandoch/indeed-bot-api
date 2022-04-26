@@ -26,8 +26,11 @@ public class IndeedBotApplication {
 
     @Scheduled(initialDelayString = "PT5S", fixedDelayString = "${ping.delay}")
     void pingAll() {
+/*
+        pings suspended
         LOG.info("PING ALL INITIALIZED");
         pingController.pingAll();
+*/
     }
 }
 
