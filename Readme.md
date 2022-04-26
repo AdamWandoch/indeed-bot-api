@@ -1,11 +1,8 @@
 # IndeedBot API
-###### Jobs scanner
+###### RESTful API
+[![BUILD](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 
-[![BUILD](https://github.com/AdamWandoch/indeed-bot/workflows/BUILD/badge.svg)](https://github.com/AdamWandoch/indeed-bot/actions/workflows/maven.yml)
-
-VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
-[AWS](https://ru4umr3xja.eu-west-1.awsapprunner.com)
-
+VIEW DEPLOYMENT : [AWS](https://3hvy3ei8qx.eu-west-1.awsapprunner.com/)
 This is an experimental project to explore Java ecosystem of technologies for web development.
 
 The application retrieves html from https://ie.indeed.com/jobs?q=software&l=cork&sort=date&filter=0&start=
