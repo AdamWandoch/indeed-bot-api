@@ -1,6 +1,5 @@
 package com.adamwandoch.indeedbot;
 
-import com.adamwandoch.indeedbot.indeedjob.IndeedJobService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class IndeedBotApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IndeedBotApplication.class);
-
-    @Autowired
-    private IndeedJobService indeedJobService;
+    private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
 
     @Autowired
     private PingController pingController;
@@ -30,15 +26,8 @@ public class IndeedBotApplication {
 
     @Scheduled(initialDelayString = "PT5S", fixedDelayString = "${ping.delay}")
     void pingAll() {
-        LOGGER.info("PING ALL INITIALIZED");
+        LOG.info("PING ALL INITIALIZED");
         pingController.pingAll();
-    }
-
-    @Scheduled(initialDelayString = "${initial.update.delay}", fixedDelayString = "${update.delay}")
-    void refreshJobsData() {
-        // initializes main function: load cache from database, retrieve new list from Indeed.ie, update database
-        LOGGER.info("CACHE AND STORE INITIALIZED");
-        indeedJobService.cacheAndStoreJobs();
     }
 }
 
