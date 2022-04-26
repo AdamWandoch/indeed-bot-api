@@ -88,7 +88,7 @@ public class IndeedJobController {
     public String reload() {
         LOG.info("RELOAD CALLED");
         indeedJobService.reloadFromDatasource();
-        return "<font size=5>Updated job list size: " + indeedJobService.getCachedJobs().size();
+        return "Updated job list size: " + indeedJobService.getCachedJobs().size();
     }
 
     @GetMapping("/size")

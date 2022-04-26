@@ -1,6 +1,5 @@
 package com.adamwandoch.indeedbot;
 
-import com.adamwandoch.indeedbot.indeedjob.IndeedJobService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class IndeedBotApplication {
 
     private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
-
-    @Autowired
-    private IndeedJobService indeedJobService;
 
     @Autowired
     private PingController pingController;

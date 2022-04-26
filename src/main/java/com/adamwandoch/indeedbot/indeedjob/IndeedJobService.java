@@ -32,15 +32,6 @@ public class IndeedJobService {
 
     private List<IndeedJob> cachedJobs = new ArrayList<>();
 
-    private String generateJobUrl(String jobId) {
-        return "https://ie.indeed.com/viewjob?jk=".concat(jobId);
-    }
-
-//    @PostConstruct
-//    public void runAfterObjectCreated() {
-//        reloadFromDatasource();
-//    }
-
     @PostConstruct
     public void reloadFromDatasource() {
         // reloads records from database

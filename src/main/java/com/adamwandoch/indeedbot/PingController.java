@@ -17,11 +17,6 @@ import java.net.URL;
 
 @RestController
 public class PingController {
-//    legacy deployments
-//    private final String PING_ENDPOINT_URL_HEROKU = "https://indeed-bot.herokuapp.com/ping";
-//    private final String PING_ENDPOINT_URL_HEROKU_API = "https://indeed-bot-api.herokuapp.com/ping";
-//    private final String PING_ENDPOINT_URL_AWS = "https://ru4umr3xja.eu-west-1.awsapprunner.com/ping";
-
     private final String PING_ENDPOINT_URL_AWS_API = "https://3hvy3ei8qx.eu-west-1.awsapprunner.com/ping";
 
     private final String PING_ENDPOINT_URL_AWS_BOT_1 = "https://fkeixfwcg3.us-east-1.awsapprunner.com/ping";
