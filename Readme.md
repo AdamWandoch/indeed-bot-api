@@ -2,14 +2,13 @@
 ###### RESTful API
 [![BUILD](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 
-VIEW DEPLOYMENT : [HEROKU](https://indeed-bot.herokuapp.com) < | >
-[AWS](https://ru4umr3xja.eu-west-1.awsapprunner.com)
+VIEW DEPLOYMENT : [AWS](https://3hvy3ei8qx.eu-west-1.awsapprunner.com/)
 
 This is an experimental project to explore Java ecosystem of technologies for web development.
 
 The application serves data from Postgres Database gathered by instances of [indeed-bot.](https://github.com/AdamWandoch/indeed-bot)
 
-This Spring Boot powered RESTful API is running on Heroku and another instance on AWS.
+This Spring Boot powered RESTful API is deployed on AWS.
 
 #### To run the project locally:
  * install PostgreSQL
