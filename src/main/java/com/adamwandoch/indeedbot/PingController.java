@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Adam Wandoch
@@ -17,15 +19,15 @@ import java.net.URL;
 
 @RestController
 public class PingController {
-    private final String PING_ENDPOINT_URL_AWS_API = "https://3hvy3ei8qx.eu-west-1.awsapprunner.com/ping";
-
-    private final String PING_ENDPOINT_URL_AWS_BOT_1 = "https://fkeixfwcg3.us-east-1.awsapprunner.com/ping";
-    private final String PING_ENDPOINT_URL_AWS_BOT_2 = "https://wk3etpctsu.us-east-2.awsapprunner.com/ping";
-    private final String PING_ENDPOINT_URL_AWS_BOT_3 = "https://bkiktqyhhn.us-west-2.awsapprunner.com/ping";
-    private final String PING_ENDPOINT_URL_AWS_BOT_4 = "https://mt5z57rhmm.ap-northeast-1.awsapprunner.com/ping";
-
-
     private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
+    private final List<String> urlList = Arrays.asList("https://3hvy3ei8qx.eu-west-1.awsapprunner.com/ping",
+                                                 "http://indeedbotvirginia-env.eba-4sf63gic.us-east-1.elasticbeanstalk.com/ping",
+                                                 "http://indeedbotohio-env.eba-niszmpdp.us-east-2.elasticbeanstalk.com/ping",
+                                                 "http://indeedbotcalifornia-env.eba-mhqpsqdy.us-west-1.elasticbeanstalk.com/ping",
+                                                 "http://indeedbotoregon-env.eba-daaqgedz.us-west-2.elasticbeanstalk.com/ping",
+                                                 "http://indeedbottokyo-env.eba-xmsejbh8.ap-northeast-1.elasticbeanstalk.com/ping",
+                                                 "http://indeedbotireland-env.eba-cckhqftf.eu-west-1.elasticbeanstalk.com/ping"
+            );
 
     @GetMapping("/ping")
     public String ping() {
@@ -34,11 +36,7 @@ public class PingController {
 
     void pingAll() {
         //combines ping operations to multiple instances
-        ping(PING_ENDPOINT_URL_AWS_API);
-        ping(PING_ENDPOINT_URL_AWS_BOT_1);
-        ping(PING_ENDPOINT_URL_AWS_BOT_2);
-        ping(PING_ENDPOINT_URL_AWS_BOT_3);
-        ping(PING_ENDPOINT_URL_AWS_BOT_4);
+        urlList.forEach(this::ping);
     }
 
     void ping(String url_string) {
