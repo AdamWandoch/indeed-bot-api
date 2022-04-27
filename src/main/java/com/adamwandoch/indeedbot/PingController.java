@@ -20,7 +20,7 @@ import java.util.List;
 @RestController
 public class PingController {
     private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
-    private final List<String> urlList = Arrays.asList("https://3hvy3ei8qx.eu-west-1.awsapprunner.com/ping",
+    private final List<String> urlList = Arrays.asList("http://indeedbotapi-env.eba-6i3bdcsz.eu-west-1.elasticbeanstalk.com/ping",
                                                  "http://indeedbotvirginia-env.eba-4sf63gic.us-east-1.elasticbeanstalk.com/ping",
                                                  "http://indeedbotohio-env.eba-niszmpdp.us-east-2.elasticbeanstalk.com/ping",
                                                  "http://indeedbotcalifornia-env.eba-mhqpsqdy.us-west-1.elasticbeanstalk.com/ping",
