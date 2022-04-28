@@ -1,3 +1,5 @@
+##### :exclamation::exclamation::exclamation: MY AWS ACCOUNT HAS BEEN TEMPORARILY SUSPENDED :exclamation::exclamation::exclamation:
+
 # IndeedBot API
 ###### RESTful API
 [![BUILD](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
