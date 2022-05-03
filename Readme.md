@@ -2,7 +2,7 @@
 ###### RESTful API
 [![BUILD](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml/badge.svg?branch=split)](https://github.com/AdamWandoch/indeed-bot-api/actions/workflows/maven.yml)
 
-VIEW DEPLOYMENT : [AWS]("http://indeed-bot-api.herokuapp.com/"/)
+VIEW DEPLOYMENT : [HEROKU]("http://indeed-bot-api.herokuapp.com/")
 
 This is an experimental project to explore Java ecosystem of technologies for web development.
 
