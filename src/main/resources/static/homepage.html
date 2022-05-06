@@ -1,71 +1,100 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>IndeedBot - Little Helper</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndeedBotAPI</title>
+  </head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+  <style>
     body {
-        background-color: #424242;
-        font-family: Poppins, sans-serif;
+      font-family: Poppins, sans-serif;
+      background-color: #424242;
     }
 
-    .div1 {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        border: 1px solid;
-        border-color: white;
-        background-color: #1A3F5A;
-        width: auto;
-        max-width: 1000px;
-        text-align: center;
-        color: #ffffff;
-        border-radius: 10px;
-        font-size: 14px;
-        spacing: 10px
+    .block {
+      margin: 0.5em auto 0.5em auto;
+      width: auto;
+      max-width: 1000px;
+      border: 1px solid;
+      border-radius: 10px;
+      border-color: white;
+      color: #ffffff;
+      font-size: 14px;
+      text-align: center;
+      background-color: #1a3f5a;
     }
 
-    .div2 {
-        margin-left: 5%;
-        margin-right: 5%;
-        text-align: justify;
+    .container {
+      margin: 0 5% 1em 5%;
+      text-align: justify;
+    }
+
+    footer > a {
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 1em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    p {
+      margin: 0.2em;
     }
 
     a {
-        color: #F1AB77;
-        text-decoration: none
+      color: #f1ab77;
+      text-decoration: none;
     }
 
     a:hover {
-        text-decoration: underline;
-        color: #F26B07
+      text-decoration: underline;
+      color: #f26b07;
     }
-
-</style>
-
-<body>
-<div class="div1">
-    <p>
-    <h1>IndeedBot API<br>
-    <span style="font-size: 20px">job listings scanner by <a href="https://github.com/AdamWandoch" target="_blank">AdamWandoch</a></span></h1>
-    </p>
-</div>
-<div class="div1">
-    <div class="div2">
+  </style>
+  <body>
+    <header class="block">
+      <h1>IndeedBot API</h1>
+      <h2>
+        job listings scanner by
+        <a href="https://github.com/AdamWandoch" target="_blank">AdamWandoch</a>
+      </h2>
+    </header>
+    <main class="block">
+      <article class="container">
         <h2>Description</h2>
-        <p>This is an experimental project to explore Java ecosystem of technologies for web development.</p>
-        <p>The application serves data from Postgres Database gathered by instances of <a href="https://github.com/AdamWandoch/indeed-bot" target="_blank">indeed-bot</a>.
+        <p>
+          This is an experimental project to explore Java ecosystem of technologies for
+          web development.
+        </p>
+        <p>
+          The application serves data from Postgres Database gathered by instances of
+          <a href="https://github.com/AdamWandoch/indeed-bot" target="_blank"
+            >indeed-bot</a
+          >.
         </p>
         <p>This Spring Boot powered RESTful API is deployed on HEROKU.</p>
-        <h3>How to use?</h3>
-        <p>For available endpoints and instructions visit <a href="https://github.com/AdamWandoch/indeed-bot-api#available-endpoints-serving-json" target="_blank">README.MD</a></p>
-    </div>
-</div>
-<div class="div1">
-    <h2><a href="https://github.com/AdamWandoch/indeed-bot-api" target="_blank">View Code on Github</a></h2>
-</div>
-</body>
+        <h2>How to use?</h2>
+        <p>
+          For available endpoints and instructions visit
+          <a
+            href="https://github.com/AdamWandoch/indeed-bot-api#available-endpoints-serving-json"
+            target="_blank"
+            >README.MD</a
+          >
+        </p>
+      </article>
+    </main>
+    <footer class="block">
+      <a href="https://github.com/AdamWandoch/indeed-bot-api" target="_blank"
+        >View Code on Github</a
+      >
+    </footer>
+  </body>
 </html>
