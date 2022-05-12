@@ -21,7 +21,8 @@ import java.util.List;
 public class PingController {
     private static final Logger LOG = LoggerFactory.getLogger(IndeedBotApplication.class);
     private final List<String> urlList = Arrays.asList("http://indeed-bot-api.herokuapp.com/ping",
-                                                       "http://indeed-bot.herokuapp.com/ping");
+                                                       "http://indeed-bot.herokuapp.com/ping",
+                                                        "https://adamwandoch.herokuapp.com/");
 
     @GetMapping("/ping")
     public String ping() {
